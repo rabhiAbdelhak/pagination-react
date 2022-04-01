@@ -37,12 +37,12 @@ function App() {
           </select>
         </form>
       </div>
-      <div className="items">
+      <section className="items">
         {users[index].map((user) => {
           return <SingleUser key={user.id} {...user} />;
         })}
-      </div>
-      <div className="pages">
+      </section>
+      <section className="btns-container">
         <button
           className="move-btn next"
           onClick={() => setIndex(checkIndex(index - 1))}
@@ -66,7 +66,7 @@ function App() {
         >
           Next
         </button>
-      </div>
+      </section>
     </div>
   );
 }
